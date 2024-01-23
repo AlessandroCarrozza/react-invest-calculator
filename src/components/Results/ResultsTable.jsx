@@ -1,13 +1,14 @@
 import "./ResultsTable.css";
 import { calculateInvestmentResults } from "../../util/investment";
+import { formatter } from "../../util/investment";
 
 const ResultsTable = ({ datas }) => {
-  const results = calculateInvestmentResults(
-    datas.initialInvestment,
-    datas.annualInvestment,
-    datas.expectedReturn,
-    datas.duration
-  );
+  console.log(datas);
+
+  const results = [...calculateInvestmentResults(datas)];
+
+  console.log(results);
+
   return (
     <table>
       <thead>
@@ -20,13 +21,19 @@ const ResultsTable = ({ datas }) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{results.year}</td>
-          <td>{datas.annualInvestment}</td>
-          <td>{datas.expectedReturn}</td>
-          <td>{datas.duration}</td>
-          <td>{datas.initialInvestment}</td>
-        </tr>
+        {results.map((result) => (
+          <tr key={result.year}>
+            <td>{result.year}</td>
+            <td>{formatter.format(result.valueEndOfYear)}</td>
+            <td>{formatter.format(result.interest)}</td>
+            <td>{formatter.format(result.interest += )}</td>
+            <td>
+              {formatter.format(
+                (datas.initialInvestment += datas.annualInvestment)
+              )}
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
