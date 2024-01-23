@@ -1,0 +1,8 @@
+table {
+  margin: 1rem auto 0;
+  border-spacing: 1.2rem;
+}
+
+table tr td {
+  text-align: right;
+}
