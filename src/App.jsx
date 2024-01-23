@@ -1,5 +1,5 @@
-import InputsDatas from "./components/InputsDatas";
-import ResultsTable from "./components/ResultsTable";
+import InputsDatas from "./components/Inputs/InputsDatas";
+import ResultsTable from "./components/Results/ResultsTable";
 
 function App() {
   return (
