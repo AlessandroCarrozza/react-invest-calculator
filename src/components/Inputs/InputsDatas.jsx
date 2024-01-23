@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const InputsDatas = () => {
   const [inputsDatas, setInputsDatas] = useState({
-    initialInvestment: null,
-    annualInvestment: null,
-    expectedReturn: null,
-    duration: null,
+    initialInvestment: 10000,
+    annualInvestment: 1200,
+    expectedReturn: 6,
+    duration: 10,
   });
 
   const handleChange = (event) => {
@@ -27,6 +27,7 @@ const InputsDatas = () => {
             onChange={handleChange}
             type="number"
             name="initialInvestment"
+            value={inputsDatas.initialInvestment}
           />
         </div>
       </div>
@@ -38,6 +39,7 @@ const InputsDatas = () => {
             onChange={handleChange}
             type="number"
             name="annualInvestment"
+            value={inputsDatas.annualInvestment}
           />
         </div>
       </div>
@@ -45,14 +47,24 @@ const InputsDatas = () => {
       <div className="input-data">
         <div>
           <label>EXPECTED RETURN</label>
-          <input onChange={handleChange} type="number" name="expectedReturn" />
+          <input
+            onChange={handleChange}
+            type="number"
+            name="expectedReturn"
+            value={inputsDatas.expectedReturn}
+          />
         </div>
       </div>
 
       <div className="input-data">
         <div>
           <label>DURATION</label>
-          <input onChange={handleChange} type="number" name="duration" />
+          <input
+            onChange={handleChange}
+            type="number"
+            name="duration"
+            value={inputsDatas.duration}
+          />
         </div>
       </div>
     </div>
