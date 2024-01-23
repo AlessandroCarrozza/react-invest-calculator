@@ -1,23 +1,10 @@
 import "./InputsDatas.css";
-import { useState } from "react";
 import InputData from "./InputData";
 
-const InputsDatas = () => {
-  const [inputsDatas, setInputsDatas] = useState({
-    initialInvestment: 10000,
-    annualInvestment: 1200,
-    expectedReturn: 6,
-    duration: 10,
-  });
-
+const InputsDatas = ({ inputsDatas, onAddDatas }) => {
   const handleChange = (event) => {
-    setInputsDatas((prev) => ({
-      ...prev,
-      [event.target.name]: event.target.value,
-    }));
+    onAddDatas(event);
   };
-
-  console.log(inputsDatas);
 
   const inputs = [
     {
@@ -62,12 +49,12 @@ export default InputsDatas;
 {
   /* <div className="input-data">
         <div>
-          <label>ANNUAL INVESTMENT</label>
+          <label>INITIAL INVESTMENT</label>
           <input
             onChange={handleChange}
             type="number"
-            name="annualInvestment"
-            value={inputsDatas.annualInvestment}
+            name="initialInvestment"
+            value={inputsDatas.initialInvestment}
           />
         </div>
 
