@@ -1,15 +1,15 @@
 import "./ResultsTable.css";
 
-const ResultsTable = () => {
+const ResultsTable = ({ datas }) => {
   return (
     <table>
       <thead>
         <tr>
-          <th>testtestte</th>
-          <th>testtestte</th>
-          <th>testtestte</th>
-          <th>testtestte</th>
-          <th>testtestte</th>
+          <th>Year</th>
+          <th>Investment Value</th>
+          <th>Interest (Year)</th>
+          <th>Total Interest</th>
+          <th>Invested Capital</th>
         </tr>
       </thead>
       <tbody>

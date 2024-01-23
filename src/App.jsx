@@ -22,7 +22,7 @@ function App() {
   return (
     <main>
       <InputsDatas inputsDatas={inputsDatas} onAddDatas={addDatas} />
-      <ResultsTable />
+      <ResultsTable datas={inputsDatas} />
     </main>
   );
 }

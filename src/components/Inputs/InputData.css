@@ -1,0 +1,10 @@
+#inputs-datas-container .input-data {
+  display: inline-block;
+  width: 50%;
+  padding: 1.2rem 1.5rem;
+}
+
+.input-data input {
+  width: 100%;
+  height: 2.5rem;
+}
