@@ -14,7 +14,7 @@ const ResultsTable = ({ datas }) => {
       </thead>
       <tbody>
         <tr>
-          <td>tbody</td>
+          <td>{datas.initialInvestment}</td>
           <td>tbody</td>
           <td>tbody</td>
           <td>tbody</td>
