@@ -1,6 +1,13 @@
 import "./ResultsTable.css";
+import { calculateInvestmentResults } from "../../util/investment";
 
 const ResultsTable = ({ datas }) => {
+  const results = calculateInvestmentResults(
+    datas.initialInvestment,
+    datas.annualInvestment,
+    datas.expectedReturn,
+    datas.duration
+  );
   return (
     <table>
       <thead>
@@ -14,11 +21,11 @@ const ResultsTable = ({ datas }) => {
       </thead>
       <tbody>
         <tr>
+          <td>{results.year}</td>
+          <td>{datas.annualInvestment}</td>
+          <td>{datas.expectedReturn}</td>
+          <td>{datas.duration}</td>
           <td>{datas.initialInvestment}</td>
-          <td>tbody</td>
-          <td>tbody</td>
-          <td>tbody</td>
-          <td>tbody</td>
         </tr>
       </tbody>
     </table>
