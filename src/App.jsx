@@ -13,7 +13,7 @@ function App() {
   const addDatas = (event) => {
     setInputsDatas((prev) => ({
       ...prev,
-      [event.target.name]: event.target.value,
+      [event.target.name]: +event.target.value,
     }));
   };
 
