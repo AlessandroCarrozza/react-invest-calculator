@@ -6,3 +6,7 @@ table {
 table tr td {
   text-align: right;
 }
+
+.title-zero {
+  text-align: center;
+}

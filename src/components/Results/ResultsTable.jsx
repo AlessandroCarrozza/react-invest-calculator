@@ -29,7 +29,7 @@ const ResultsTable = ({ datas }) => {
     "Total Interest",
     "Invested Capital",
   ];
-  return (
+  return results.length > 0 ? (
     <table>
       <thead>
         <tr>
@@ -50,6 +50,8 @@ const ResultsTable = ({ datas }) => {
         ))}
       </tbody>
     </table>
+  ) : (
+    <h1 className="title-zero">Please enter a duration greater over 0</h1>
   );
 };
 
