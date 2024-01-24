@@ -2,10 +2,6 @@ import "./InputsDatas.css";
 import InputData from "./InputData";
 
 const InputsDatas = ({ inputsDatas, onAddDatas }) => {
-  const handleChange = (event) => {
-    onAddDatas(event);
-  };
-
   const inputs = [
     {
       label: "INITIAL INVESTMENT",
@@ -34,7 +30,7 @@ const InputsDatas = ({ inputsDatas, onAddDatas }) => {
       {inputs.map((input) => (
         <InputData
           key={input.name}
-          onChange={handleChange}
+          onChange={onAddDatas}
           label={input.label}
           name={input.name}
           value={input.value}

@@ -12,6 +12,7 @@ const ResultsTable = ({ datas }) => {
       datas.initialInvestment;
 
     const totalAmountInvested = result.valueEndOfYear - totalInterest;
+    console.log(result);
 
     return {
       ...result,
